@@ -47,7 +47,7 @@ def apply_coupons(cart, coupons)
   new_cart = consolidate_cart(cart)
   i = 0 
   pp new_cart
-  pp coupons
+  pp coupons.size
   if coupons.size == 0 
     return new_cart
   end
