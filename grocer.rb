@@ -53,6 +53,7 @@ def apply_coupons(cart, coupons)
     brem = find_item_by_name_in_collection(item_name_with_coupon,new_cart)
     pp ru
     pp brem
+    pp new_cart
     if ru == nil
     elsif brem == nil
       new_cart << ru
