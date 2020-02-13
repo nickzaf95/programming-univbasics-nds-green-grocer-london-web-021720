@@ -76,7 +76,6 @@ def apply_coupons(cart, coupons)
         else if new_cart[j][:item] == item_name
           new_cart[j][:count] -= number
         end
-        end
         j += 1 
         
     end
