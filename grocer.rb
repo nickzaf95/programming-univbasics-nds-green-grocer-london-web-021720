@@ -48,6 +48,9 @@ def apply_coupons(cart, coupons)
   i = 0 
   pp new_cart
   pp coupons
+  if coupons.size == 0 
+    return new_cart
+  end
   while i < coupons.size do
     item_name = coupons[i][:item]
     item_name_with_coupon = "#{item_name} W/COUPON"
