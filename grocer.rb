@@ -46,6 +46,7 @@ def apply_coupons(cart, coupons)
   
   new_cart = consolidate_cart(cart)
   i = 0 
+  pp new_cart
   while i < coupons.size do
     item_name = coupons[i][:item]
     item_name_with_coupon = "#{item_name} W/COUPON"
