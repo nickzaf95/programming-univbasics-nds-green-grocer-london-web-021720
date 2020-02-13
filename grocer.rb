@@ -71,7 +71,7 @@ def apply_coupons(cart, coupons)
         new_cart << ru
         new_cart[-1][:item] = "#{item_name} W/COUPON"
         new_cart[-1][:count] = coupons[i][:num]
-        number = coupons[i][:count]
+        number = coupons[i][:num]
         cost = coupons[i][:cost]
         new_cart[-1][:price] = cost / number
         j = 0 
