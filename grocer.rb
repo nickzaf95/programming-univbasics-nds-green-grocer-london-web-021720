@@ -48,7 +48,7 @@ def apply_coupons(cart, coupons)
   i = 0 
   pp new_cart
   pp cart
-  pp coupons.size
+  pp coupons
   if coupons.size == 0 
     puts "this should work"
     return cart
@@ -69,9 +69,9 @@ def apply_coupons(cart, coupons)
     #supposed to check whether there are already items with a coupon applied
       new_cart << ru
       new_cart[-1][:item] = "#{item_name} W/COUPON"
-      new_cart[-1][:count] = coupons[i][:num]
-      number = coupons[i][:num]
-      cost = coupons[i][:cost]
+      new_cart[-1][:count] = coupons[i][:count]
+      number = coupons[i][:count]
+      cost = coupons[i][:price]
       new_cart[-1][:price] = cost / number
       j = 0 
       while j < (new_cart.size - 1) do
