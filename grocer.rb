@@ -51,7 +51,7 @@ def apply_coupons(cart, coupons)
   pp coupons.size
   if coupons.size == 0 
     puts "this should work"
-    return new_cart
+    return cart
   end
   puts "y?"
   while i < coupons.size do
