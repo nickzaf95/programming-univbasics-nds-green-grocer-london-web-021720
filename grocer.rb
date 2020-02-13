@@ -51,6 +51,8 @@ def apply_coupons(cart, coupons)
     item_name_with_coupon = "#{item_name} W/COUPON"
     ru = find_item_by_name_in_collection(item_name,new_cart)
     brem = find_item_by_name_in_collection(item_name_with_coupon,new_cart)
+    pp ru
+    pp brem
     if ru == nil
     elsif brem == nil
       new_cart << ru
@@ -80,9 +82,9 @@ def apply_coupons(cart, coupons)
       end  
     end
     i += 1 
-    pp item_name
+    #pp item_name
     pp new_cart
-    pp item_name_with_coupon
+    #pp item_name_with_coupon
   end
   #pp new_cart
   new_cart
