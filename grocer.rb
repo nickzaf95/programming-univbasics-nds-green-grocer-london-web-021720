@@ -63,7 +63,10 @@ def apply_coupons(cart, coupons)
     #pp brem
     #pp new_cart
     if ru == nil
-    elsif brem == nil
+      #if there is no item with that name do nothing 
+    elsif brem == nil then #error here but not sure why
+    
+    #supposed to check whether there are already items with a coupon applied
       new_cart << ru
       new_cart[-1][:item] = "#{item_name} W/COUPON"
       new_cart[-1][:count] = coupons[i][:num]
