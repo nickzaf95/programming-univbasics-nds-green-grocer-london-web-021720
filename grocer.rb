@@ -43,6 +43,31 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  new_cart = consolidate_cart[cart]
+  i = 0 
+  while i < coupons.size do
+    item_name = coupons[i][:item]
+    ru = find_item_by_name_in_collection(item_name,new_cart)
+    if ru == nil
+    else
+      new_cart << ru
+      new_cart[-1][:item] = "#{item_name} W/COUPON"
+      new_cart[-1][:count] = coupons[i][:num]
+      number = coupons[i][:num]
+      cost = coupons[i][:cost]
+      new_cart[-1][:price] = cost / number
+      j = 0 
+      while j < new_cart.size do
+        if new_cart[j][:item] == item_name
+          new_cart[j][:count] -= number
+        end
+        j += 1 
+        
+      end
+    end
+    i += 1 
+  end
+  new_cart
 end
 
 def apply_clearance(cart)
