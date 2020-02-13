@@ -67,19 +67,20 @@ def apply_coupons(cart, coupons)
     elsif brem == nil then #error here but not sure why
     
     #supposed to check whether there are already items with a coupon applied
-      new_cart << ru
-      new_cart[-1][:item] = "#{item_name} W/COUPON"
-      new_cart[-1][:count] = coupons[i][:count]
-      number = coupons[i][:count]
-      cost = coupons[i][:price]
-      new_cart[-1][:price] = cost / number
-      j = 0 
-      while j < (new_cart.size - 1) do
-        if new_cart[j][:item] == item_name
-          new_cart[j][:count] -= number
-        end
-        j += 1 
-        
+      if coupons[i][:num] < ru[:count]
+        new_cart << ru
+        new_cart[-1][:item] = "#{item_name} W/COUPON"
+        new_cart[-1][:count] = coupons[i][:num]
+        number = coupons[i][:count]
+        cost = coupons[i][:cost]
+        new_cart[-1][:price] = cost / number
+        j = 0 
+        while j < (new_cart.size - 1) do
+          if new_cart[j][:item] == item_name
+            new_cart[j][:count] -= number
+          end
+          j += 1 
+      end  
       end
     else
       number = coupons[i][:num]
