@@ -62,7 +62,7 @@ def apply_coupons(cart, coupons)
       cost = coupons[i][:cost]
       new_cart[-1][:price] = cost / number
       j = 0 
-      while j < new_cart.size do
+      while j < (new_cart.size - 1) do
         if new_cart[j][:item] == item_name
           new_cart[j][:count] -= number
         end
@@ -83,7 +83,7 @@ def apply_coupons(cart, coupons)
     end
     i += 1 
     #pp item_name
-    pp new_cart
+    #pp new_cart
     #pp item_name_with_coupon
   end
   #pp new_cart
