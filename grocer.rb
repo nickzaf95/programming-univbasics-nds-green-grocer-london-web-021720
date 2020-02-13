@@ -9,7 +9,7 @@ def find_item_by_name_in_collection(name, collection)
     if collection[i][name] != nil
       return collection[i][name]
     end
-    pp collection[i][name]
+    pp collection[i]
     i += 1 
   end
 end
