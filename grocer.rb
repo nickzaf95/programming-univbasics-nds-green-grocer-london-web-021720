@@ -72,7 +72,7 @@ def apply_coupons(cart, coupons)
     else
       number = coupons[i][:num]
       j = 0 
-      while j < new_cart.size do
+      while j < (new_cart.size - 1) do
         if new_cart[j][:item] == item_name_with_coupon
           new_cart[j][:count] += number
         elsif new_cart[j][:item] == item_name
