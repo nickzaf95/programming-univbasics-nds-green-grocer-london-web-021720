@@ -21,8 +21,7 @@ def consolidate_cart(cart)
   i = 0 
   arr = []
   while i < cart.size do 
-    if find_item_by_name_in_collection(cart[i], arr) == nil 
-      pp cart[i]
+    if find_item_by_name_in_collection(cart[i][:item], arr) == nil 
       arr << cart[i]
       arr[-1][:count] = 1 
     else
