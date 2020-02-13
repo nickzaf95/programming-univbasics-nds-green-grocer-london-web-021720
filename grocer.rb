@@ -1,3 +1,5 @@
+require 'pp'
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -7,6 +9,7 @@ def find_item_by_name_in_collection(name, collection)
     if collection[i][name] != nil
       return collection[i][name]
     end
+    pp collection[i][name]
     i += 1 
   end
 end
