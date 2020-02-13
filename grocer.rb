@@ -80,8 +80,10 @@ def apply_coupons(cart, coupons)
       end  
     end
     i += 1 
+    pp ru
+    pp brem
   end
-  pp new_cart
+  #pp new_cart
   new_cart
 end
 
