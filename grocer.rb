@@ -48,7 +48,9 @@ def apply_coupons(cart, coupons)
   i = 0 
   while i < coupons.size do
     item_name = coupons[i][:item]
+    item_name_with_coupon = "#{item_name} W/COUPON"
     ru = find_item_by_name_in_collection(item_name,new_cart)
+    brem = find_item_by_name_in_collection(item_name_with_coupon,new_cart)
     if ru == nil
     else
       new_cart << ru
