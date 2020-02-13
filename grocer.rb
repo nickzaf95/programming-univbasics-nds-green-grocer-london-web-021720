@@ -49,6 +49,7 @@ def apply_coupons(cart, coupons)
   pp new_cart
   pp coupons.size
   if coupons.size == 0 
+    puts "this should work"
     return new_cart
   end
   puts "y?"
